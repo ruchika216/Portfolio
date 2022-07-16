@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-center"style="margin: 100px;">
+    <h1 class="text-center font-bold">Resume</h1>
+    
+</div>
+
+<div class="main d-flex justify-content-center">
+    <div class="column-1">
+      <ul class="vertical-menu">
+          <li (click)="viewMode ='tab1'" [ngClass]="{'active':viewMode =='tab1'}">🎓 Education</li>
+          <li (click)="viewMode ='tab2'" [ngClass]="{'active':viewMode =='tab2'}">📜 Experience</li>
+          <li (click)="viewMode ='tab3'" [ngClass]="{'active':viewMode =='tab3'}">🧑‍💻 Skills</li>
+          <li (click)="viewMode ='tab4'" [ngClass]="{'active':viewMode =='tab4'}">📈 Projects</li>
+          <li (click)="viewMode ='tab5'" [ngClass]="{'active':viewMode =='tab5'}">🎨 Interests</li>
+      </ul>
+    </div>
+    <div class="column-2" [ngSwitch]="viewMode">
+      <div *ngSwitchCase="'tab1'">
+        <h2>EDUCATION</h2>
+        <p><app-education></app-education></p>
+      </div>
+      <div *ngSwitchCase="'tab2'">
+        <h2>EXPERIENCE</h2>
+        <p><app-work-history></app-work-history></p>
+      </div>
+      <div *ngSwitchCase="'tab3'">
+        <h2>SKILLS</h2>
+        <p><app-programming-skills></app-programming-skills></p>
+      </div>
+      <div *ngSwitchCase="'tab4'">
+        <h2>PROJECTS</h2>
+        <p><app-projects></app-projects></p>
+      </div>
+      <div *ngSwitchCase="'tab5'">
+        <h2>INTERESTS</h2>
+        <p><app-interests></app-interests></p>
+      </div>
+    </div>
+    </div>
+<router-outlet></router-outlet>

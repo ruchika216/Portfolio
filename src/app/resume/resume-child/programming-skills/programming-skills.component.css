@@ -1,0 +1,22 @@
+.resume-education{
+    font-family: sans-serif;
+    padding-top: 2px;
+}
+.skills{
+    padding-bottom: 8px;
+}
+.card-title{
+    font-size: 15px;
+    color: #ff6723;
+    line-height: 0.9;
+}
+.btn{
+    float: right;
+
+}
+.progress{
+    margin-left: 3rem;
+    width: 40rem;
+    height: 12px;
+
+}
